@@ -1,0 +1,55 @@
+body {
+    /* bg.js에서 만듬 */
+    background-color:#ecf0f1;
+}
+
+.js-clock{
+    color : white;
+    font-size :50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.js-greetings{
+    color : white;
+    font-size: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+
+
+
+
+/* bg.js에서 만듬 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity :1 ;
+    }
+}
+
+.bgImage{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -1;  
+    /* 얘가 시계랑 todo 다 가려서 해줫는데... 아직도 다 가림. 왜냐하면. appendChild가 body맨밑에 있어서 그런거같음. */
+    animation: fadeIn .5s linear;
+}
